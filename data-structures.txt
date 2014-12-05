@@ -1,0 +1,116 @@
+The Queue
+=============================
+
+Data structures are ways to store data in a computer program. different structures exist because some are faster than others or more suitable for some tasks.
+
+Elements get appended at the end of the structure.
+Elements get removed from the beginning of the structure.
+How is this data structure called?
+
+A Queue
+————————
+each thing we put in a queue has a value. 
+how does an object know where it is in the queue? 
+  based on what's in front or behind it. we add and remove items quickly. 
+
+
+
+other structures: 
+stack
+set
+binary tree
+
+
+Stacks
+=============================
+
+what does a stack do?
+——————————————————
+a stack is just like a queue, but instead of fifo, the stack is last-in, first-out
+add elements at the beginning, remove from the beginning.
+find its size
+Print itself
+
+Adding Nodes
+————————
+make the new Node point to the current head
+make the head of the stack be the new node
+Just like in the List class we created, where the addToList() method would add new Nodes at the beginning
+
+To Remove Nodes
+———————————————
+Make the head of the stack be the second Node in the stack
+This way, we are skipping the first Node
+And it gets erased from our computers memory by Java
+
+The rest
+———————————————
+The remaining methods are just liek for the Queue class
+Stacks are extremely useful in computers
+
+The Set
+======================================
+
+What is a set?
+
+Data cannot be duplicated. Must be unique elements.
+There are a number of operations that make sets useful in some scenarios.
+
+What does a set do? 
+
+removeAll(Collection)you can remove all of them. remove from this set all the elements present in the Collection passed as a parameter.
+retainAll(Collection)—keeps in this set 
+
+Sets are complicated
+———————————————
+
+elements in them are stored without a specific order
+every time you print the set out, it would be in a different order
+instead of programming our own sets, we will use Java's built-in Set class, which works perfectly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
