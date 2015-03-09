@@ -50,7 +50,6 @@ describe BinaryTree do
       expect(tree.left_branch.right_branch.left_branch.value).to eq 48
       expect(tree.left_branch.left_branch.value).to eq 39
     end
-    
   end
 
   describe '#destroy' do
