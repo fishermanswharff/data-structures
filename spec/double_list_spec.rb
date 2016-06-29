@@ -17,7 +17,7 @@ describe DoubleLinkedList do
   describe '#prepend' do
 
     context 'when list is empty' do
-      
+
       before(:each) do
         empty_dll.prepend(00)
       end
@@ -32,7 +32,7 @@ describe DoubleLinkedList do
     end
 
     context 'when list is not empty' do
-      
+
       let(:filled_dll) do
         dll.call([00])
       end
@@ -59,7 +59,7 @@ describe DoubleLinkedList do
       end
 
       it 'adds the node to the list' do
-        expect(empty_dll.tail.value).to eq 20 
+        expect(empty_dll.tail.value).to eq 20
       end
 
       it 'sets the head to be the tail' do
@@ -69,7 +69,7 @@ describe DoubleLinkedList do
     end
 
     context 'when list is not empty' do
-      
+
       let(:filled_dll) do
         dll.call([00])
       end
@@ -90,7 +90,7 @@ describe DoubleLinkedList do
   end
 
   describe '#length' do
-    
+
     context 'when the list is empty' do
       it 'returns a value of 0' do
         expect(empty_dll.length).to eq 0
@@ -98,7 +98,7 @@ describe DoubleLinkedList do
     end
 
     context 'when the list not empty' do
-      
+
       let(:filled_dll) do
         dll.call([00])
       end
@@ -118,12 +118,12 @@ describe DoubleLinkedList do
           expect(filled_dll.length).to eq 4
         end
       end
-      
+
     end
   end
 
   describe '#find' do
-    
+
     let(:search_value) do
       00
     end
@@ -152,12 +152,12 @@ describe DoubleLinkedList do
         it 'returns a nil value' do
           expect(filled_dll.find(nil_search_value)).to eq nil
         end
-      end  
+      end
     end
   end
 
   describe '#insert_after' do
-    
+
     context 'when the list is empty' do
       it 'returns an error' do
         expect{ empty_dll.insert_after(10,20) }.to raise_error(EmptyListError)
@@ -165,7 +165,7 @@ describe DoubleLinkedList do
     end
 
     context 'when the list is not empty' do
-      
+
       let(:filled_dll) do
         dll.call([00])
       end
@@ -185,6 +185,6 @@ describe DoubleLinkedList do
           expect{ filled_dll.insert_after(20,30) }.to raise_error(NodeNotFoundError)
         end
       end
-    end    
+    end
   end
 end

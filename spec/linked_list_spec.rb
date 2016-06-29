@@ -45,7 +45,7 @@ describe LinkedList do
       ll.prepend(20)
       ll.shift
     end
-    
+
     it 'removes head' do
       expect(ll.length).to eq 2
       expect(ll.head.value).to eq 10
@@ -57,7 +57,7 @@ describe LinkedList do
   end
 
   describe '#length' do
-    
+
     before(:each) do
       ll.prepend(10)
       ll.prepend(20)
@@ -69,7 +69,7 @@ describe LinkedList do
       expect(ll.length).to eq 5
     end
   end
-  
+
   describe '#find' do
     let(:search_value) do
       20
@@ -87,7 +87,7 @@ describe LinkedList do
   end
 
   describe '#reverse' do
-    
+
     before(:each) do
       ll.append(10)
       ll.append(20)
@@ -119,7 +119,7 @@ describe LinkedList do
   end
 
   describe '#insert_after' do
-    
+
     before(:each) do
       ll.prepend(10)
       ll.append(20)

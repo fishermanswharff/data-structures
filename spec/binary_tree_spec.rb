@@ -4,45 +4,27 @@ require 'pry'
 
 require_relative '../lib/binary_tree'
 
-describe BinaryTree do
+describe BinaryTreeNode do
 
-  let(:bt) do
-    Proc.new { |value| bt = BinaryTree.new(value) }
+  let(:bt) { -> (value) { bt = BinaryTreeNode.new(value) } }
+  let(:tree) { bt.call(50) }
+
+  before :each do
+    tree.insert(40)
+    tree.insert(60)
+    tree.insert(49)
+    tree.insert(48)
+    tree.insert(51)
+    tree.insert(39)
   end
 
-  # to implement: 
-
-  # let(:tree) do
-  #   bt.call(00)
-  # end
-
-  # where tree is your local variable
-
   describe '.new' do
-    let(:tree) do
-      bt.call(50)
-    end
-
     it 'creates a new Binary Tree' do
       expect(tree.value).to eq 50
     end
   end
 
   describe '#insert' do
-    
-    let(:tree) do
-      bt.call(50)
-    end
-
-    before(:each) do
-      tree.insert(40)
-      tree.insert(60)
-      tree.insert(49)
-      tree.insert(48)
-      tree.insert(51)
-      tree.insert(39)
-    end
-    
     it 'inserts a new node' do
       expect(tree.left_branch.value).to eq 40
       expect(tree.left_branch.right_branch.value).to eq 49
@@ -53,35 +35,18 @@ describe BinaryTree do
   end
 
   describe '#destroy' do
-    
-    let(:tree) do
-      bt.call(50)
-    end
-
-    before(:each) do
-      tree.insert(40)
-      tree.insert(50)
-    end
-
     it 'destroys the node' do
-      expect(tree.destroy(50)).to be_nil
+      expect(tree.destroy(50)).to eq true
     end
   end
 
   describe '#find' do
-    let(:tree) do
-      bt.call(50)
-    end
-    before(:each) do
-      tree.insert(40)
-      tree.insert(50)
+    it 'returns the matching node' do
+      expect(tree.find(49).left_branch.value).to eq 40
     end
 
-    it 'returns the matching leaf' do
+    it 'returns self if the value equals the root value' do
       expect(tree.find(50).value).to eq 50
     end
   end
 end
-
-
-

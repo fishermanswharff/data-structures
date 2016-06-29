@@ -1,4 +1,4 @@
-class Node 
+class Node
   attr_accessor :value, :next_node, :prev_node
 
   def initialize(value = nil)
@@ -8,7 +8,7 @@ class Node
   end
 end
 
-class DoubleLinkedList 
+class DoubleLinkedList
   attr_accessor :head, :tail
 
   def initialize(values = nil)
